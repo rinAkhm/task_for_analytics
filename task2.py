@@ -1,5 +1,5 @@
 def mid_letter(word:str)->'print_word':
-    '''Выводит средний символ, если трока нечетная. Выводит пару символов, если строка четная'''
+    '''Выводит средний символ, если строка нечетная. Выводит пару символов, если строка четная'''
     x = int(len(word) / 2)
     if len(word)%2 != 0:
         print(word[x])
@@ -11,7 +11,7 @@ def mid_letter(word:str)->'print_word':
 
 
 def count_num()->int:
-    '''Подсчет ввденных чисел, если вести число 0 пограмма выдаст сумму '''
+    '''Подсчет веденных чисел, если вести число 0 пограмма выдаст сумму '''
     sum_num = 0
     while True:
         try:
@@ -28,7 +28,7 @@ def count_num()->int:
 
 
 def match_pair(girls:list,boys:list)->'print_str':
-    '''Сопоставление сотрудников по парам'''
+    '''Составление сотрудников по парам'''
     if len(girls)==len(boys):
         girls.sort()
         boys.sort()
@@ -46,7 +46,7 @@ girls = ['Kate', 'Liza', 'Kira', 'Emma', 'Trisha']
 
 
 def average_countries_temperature(countries_temperature:list)->str:
-    ''' Подсчет среднего армитической погоды в стране'''
+    ''' Подсчет среднего армитической температуры в стране'''
     for country in countries_temperature:
         result = sum(country[1])/len(country[1])
         print(f'{country[0]} : {(result):.1f} С \n') 
@@ -62,6 +62,7 @@ passcountries_temperature = [
 
 
 def average_stream(streams:list)->'print_str':
+    ''' Подсчет среднего количества просмотров по пользователям'''
     list_users = []
     count_stream = 0 
     for log in streams:
@@ -90,6 +91,7 @@ streams = [
 
 
 def duplicate_num():
+    ''' Вывод веденных дубликатов'''
     temp_list = []
     numbers = input('Вводи числа через пробел:\n').split(' ')
     [temp_list.append(numbers[num]) for num in range(len(numbers))  if numbers[num] not in temp_list and numbers[num] in numbers[num+1:] ]      
