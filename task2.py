@@ -90,9 +90,9 @@ streams = [
 
 
 def duplicate_num():
-    numbers = input('Вводи числа через пробел:\n')
-    #if numbers.isdigit:
-    list_numbers = numbers.split(' ')
-    print(list_numbers)
+    temp_list = []
+    numbers = input('Вводи числа через пробел:\n').split(' ')
+    [temp_list.append(numbers[num]) for num in range(len(numbers))  if numbers[num] not in temp_list and numbers[num] in numbers[num+1:] ]      
+    print(temp_list)
 
 duplicate_num()
